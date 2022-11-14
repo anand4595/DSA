@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,7 +9,8 @@ class Solution_recusive {
 public:
 int f(int n,int w,int wt[],int val[]){
     if (!n or !w) return 0;
-    int take = wt[n-1]<=w?val[n-1]+f(n-1,w-wt[n-1],wt,val):0;
+    int take = wt[n-1]<=w?val[n-1]+
+    f(n-1,w-wt[n-1],wt,val):0;
     int not_take = f(n-1,w,wt,val);
     return max(take,not_take);
 }
