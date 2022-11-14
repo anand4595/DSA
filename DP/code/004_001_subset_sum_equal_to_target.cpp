@@ -32,13 +32,6 @@ class Solution_tab {
     using vi = vector<int>;
     using vvi = vector<vi>;
     public:
-    /**
-     * Tabulation solution of subset sum equal to target 
-     * @param n length of vector 
-     * @param k target sum 
-     * @param arr vectors address
-     * @returns 0/1 depending if we got a subset equal to target  
-    */
     bool f(int n,int k,vi &arr){
         vvi dp(n+1,vi(k+1,-1));
         for  (int i = 0; i < dp.size();i++) dp[i][0] = 1;
