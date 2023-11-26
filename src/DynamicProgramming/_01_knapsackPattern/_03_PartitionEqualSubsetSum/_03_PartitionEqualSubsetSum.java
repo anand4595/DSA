@@ -1,9 +1,10 @@
 // https://leetcode.com/problems/partition-equal-subset-sum/
-// leetcode post TBD
 package DynamicProgramming._01_knapsackPattern._03_PartitionEqualSubsetSum;
 
 class Solve {
   // recursive
+  // TC - O(2^n)
+  // SC - O(n)
   public Boolean solveRecursive(int[] nums) {
     int sum = 0;
     for (int i : nums)
@@ -26,6 +27,8 @@ class Solve {
 
   // memoization
   // calling other function for memoization using function overloading
+  // TC - O(n^2)
+  // SC - O(n + n^2)
   public Boolean solveMemoization(int[] nums) {
     int sum = 0;
     for (int i : nums)
@@ -59,6 +62,8 @@ class Solve {
   }
 
   // tabulation
+  // TC - O(n^2)
+  // SC - O(n^2)
   public Boolean solveTabulation(int[] nums) {
     int N = nums.length;
     int sum = 0;
@@ -83,6 +88,8 @@ class Solve {
   }
 
   // sapceOptmized
+  // TC - O(n^2)
+  // Sc - O(sum)
   public Boolean solveSapceOptmized(int[] nums) {
     int N = nums.length;
     int sum = 0;
