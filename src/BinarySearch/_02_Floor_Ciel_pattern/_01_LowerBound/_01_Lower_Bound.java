@@ -9,8 +9,7 @@ class Solve {
       return n;
     int s = 0;
     int e = n - 1;
-    int ans = e;
-    return solveRecursion(s, e, ans, x, arr);
+    return solveRecursion(s, e, e, x, arr);
   }
 
   public int solveRecursion(int s, int e, int ans, int x, int[] arr) {
