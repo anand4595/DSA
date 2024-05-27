@@ -1,125 +1,89 @@
 // https://leetcode.com/problems/longest-common-prefix/description/
-/*
 
-    PENDING
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 
-const string dash = "---------------------------------";
+const unsigned int ALPHABET_SIZE = 26;
+const char CHILD_NODE_START = 'a';
 
-class Logger
+class TrieNode
 {
 public:
-  static const bool isDebuging = false;
-  static void debug(string s)
-  {
-    if (isDebuging)
-    {
-      cout << s << endl;
-      cout.flush();
-    }
-  }
+  vector<TrieNode *> childNode;
+  bool wordEnd;
 
-  static void debug(vector<string> strLs)
-  {
-    if (isDebuging)
-    {
-      for (string s : strLs)
-      {
-        cout << s << " ";
-      }
-      cout << endl;
-      cout.flush();
-    }
-  }
-};
-
-struct TrieNode
-{
-  static const int ALPHABET_SIZE = 26;
-  bool isWordEnd;
-  TrieNode *childNode[TrieNode::ALPHABET_SIZE];
   TrieNode()
   {
-    for (int i = 0; i < TrieNode::ALPHABET_SIZE; i++)
+    this->childNode = vector<TrieNode *>(ALPHABET_SIZE, NULL);
+    this->wordEnd = false;
+  }
+
+  vector<pair<int, TrieNode *>> getNonNullChildNode()
+  {
+    vector<pair<int, TrieNode *>> ls;
+    for (int i = 0; i < childNode.size(); i++)
     {
-      this->childNode[i] = NULL;
+      if (childNode[i])
+      {
+        ls.push_back({i, childNode[i]});
+      }
     }
-    this->isWordEnd = false;
+    return ls;
   }
 };
 
 class Trie
 {
+private:
+  TrieNode *root;
+
 public:
-  TrieNode *root = new TrieNode();
+  Trie()
+  {
+    this->root = new TrieNode();
+  }
 
   void insert(string str)
   {
     TrieNode *currentNode = this->root;
     for (char ch : str)
     {
-      Logger::debug("insert - " + string(1, ch));
-      if (currentNode->childNode[ch - 'a'] == NULL)
-      {
-        Logger::debug("insert - " + string(1, ch) + " new node inserted");
-        currentNode->childNode[ch - 'a'] = new TrieNode();
-      }
-      currentNode = currentNode->childNode[ch - 'a'];
+      TrieNode *childNode = currentNode->childNode[ch - CHILD_NODE_START] ? currentNode->childNode[ch - CHILD_NODE_START] : new TrieNode();
+      currentNode->childNode[ch - CHILD_NODE_START] = childNode;
+      currentNode = childNode;
     }
-    Logger::debug("insert - " + string(1, str[str.size() - 1]) + " marked as end");
-    currentNode->isWordEnd = true;
+    currentNode->wordEnd = true;
   }
 
-  void insert(vector<string> stringLs)
+  void insert(vector<string> &strs)
   {
-    for (string s : stringLs)
+    for (string str : strs)
     {
-      Logger::debug(dash);
-      Logger::debug("insert - " + s + " inserted");
-      insert(s);
+      insert(str);
     }
   }
 
-  vector<pair<int, TrieNode *>> getNonNullElements(TrieNode *node)
+  void longestCommonPrefix(TrieNode *trieNode, string &prefix)
   {
-    vector<pair<int, TrieNode *>> ls;
-    for (int i = 0; i < TrieNode::ALPHABET_SIZE; i++)
+    // if a word end then prefix ends there
+    if (trieNode->wordEnd)
     {
-      if (node->childNode[i])
-      {
-        Logger::debug("getNonNullElements - found non element " + string(1, char('a' + i)));
-        ls.push_back({i, node->childNode[i]});
-      }
+      return;
     }
-    return ls;
+    auto nonNullChildNode = trieNode->getNonNullChildNode();
+    // only single node must be condidered
+    // Zero or Greater than one means no node and more than one path respectively
+    if (nonNullChildNode.size() == 1)
+    {
+      prefix.append(string(1, char(CHILD_NODE_START + nonNullChildNode[0].first)));
+      longestCommonPrefix(nonNullChildNode[0].second, prefix);
+    }
   }
 
-  string getLongestCommonPrefix(TrieNode *node, string &prefix)
-  {
-    vector<pair<int, TrieNode *>> nonNullElements = getNonNullElements(node);
-    if (nonNullElements.size() == 1)
-    {
-      prefix.push_back(char('a' + nonNullElements[0].first));
-      if (!nonNullElements[0].second->isWordEnd)
-      {
-        getLongestCommonPrefix(nonNullElements[0].second, prefix);
-      }
-      else
-      {
-        return prefix;
-      }
-    }
-    return prefix;
-  }
-
-  string getLongestCommonPrefix()
+  string longestCommonPrefix()
   {
     string prefix = "";
-    getLongestCommonPrefix(this->root, prefix);
-    Logger::debug("getLongestCommonPrefix - found longest preifx " + prefix);
+    longestCommonPrefix(this->root, prefix);
     return prefix;
   }
 };
@@ -131,13 +95,6 @@ public:
   {
     Trie t;
     t.insert(strs);
-    return t.getLongestCommonPrefix();
+    return t.longestCommonPrefix();
   }
 };
-
-// int main()
-// {
-//   Solution solution;
-//   vector<string> strLs = {"anand", "anan", "a"};
-//   solution.longestCommonPrefix(strLs);
-// }
