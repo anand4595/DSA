@@ -1,6 +1,26 @@
 # Introduction
 This is the file which contains all the questions done in DSA
 
+## Standard Algos
+| Topic    | Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
+| ---------|-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
+| Strings  | Rabin Karp                               |                                                                                   |                                             |          |     |        |       |
+| Strings  | KMP algo / LPS(pi) array                 |                                                                                   |                                             |          |     |        |       |
+| Strings  | min instertion to make string palindrome |                                                                                   |                                             |          |     |        |       |
+| Graph    | BFS                                      |                                                                                   |                                             |          |     |        |       |
+| Graph    | DFS                                      |                                                                                   |                                             |          |     |        |       |
+| Graph    | Cycle detection - BFS                    |                                                                                   |                                             |          |     |        |       |
+| Graph    | Cycle detection - DFS                    |                                                                                   |                                             |          |     |        |       |
+| Graph    | Topo sort - DFS                          |                                                                                   |                                             |          |     |        |       |
+| Graph    | Topo sort - BFS (khan algo)              |                                                                                   |                                             |          |     |        |       |
+| Graph    | Bipartite - BFS & DFS                    |                                                                                   |                                             |          |     |        |       |
+| Graph    | Dijkstra Algorithm                       |                                                                                   |                                             |          |     |        |       |
+| Graph    | Bellman-Ford Algo                        |                                                                                   |                                             |          |     |        |       |
+| Graph    | Floyd Warshall Algorithm                 |                                                                                   |                                             |          |     |        |       |
+| Graph    | Prim's Algo                              |                                                                                   |                                             |          |     |        |       |
+| Graph    | Kruskals Algo                            |                                                                                   |                                             |          |     |        |       |
+
+
 # Tries
 | No  | Question                    | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
 | --: | ----------------------------| :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
@@ -9,3 +29,4 @@ This is the file which contains all the questions done in DSA
 | 3   | Longest common prefix       | [leetcode](https://leetcode.com/problems/longest-common-prefix/description/)      | [code](/Tries/Longest_common_prefix.cpp)    | Done     | 1   | Yes    |None   | 
 | 4   | Count Distinct Substrings   | [GFG](https://www.geeksforgeeks.org/problems/count-of-distinct-substrings/1)      | [code](/Tries/countOFDistinctSubString.cpp) | Done     | 1   | Yes    |None   |
 | 5   | Delete Node                 | [GFG](https://www.geeksforgeeks.org/problems/trie-delete/1)                       | [code](/Tries/deleteNode.cpp)               | Pending  | 4   | Yes    |None   |
+| 6   | Search Engine               | [GFG](https://www.geeksforgeeks.org/problems/search-query-auto-complete/1)        | [code](/Tries/searchEngine.cpp)             | Done     | 4   | Yes    |None   |
