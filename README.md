@@ -2,11 +2,33 @@
 This is the file which contains all the questions done in DSA
 
 ## Standard Algos
+
+### Sorting
+| Topic    | Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
+| ---------|-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
+| Sotring  | Bubble sort                              | [GFG](https://www.geeksforgeeks.org/problems/bubble-sort/1)                       | [CODE](/Sorting/Bubble.cpp)                 |          |     |        |       |   
+| Sorting  | Selection sort                           | [GFG](https://www.geeksforgeeks.org/problems/selection-sort/1)                    | [CODE](/Sorting/Selection.cpp)              |         |     |        |       | 
+| Sorting  | insertion                                | [GFG](https://www.geeksforgeeks.org/problems/reverse-a-linked-list/1)                                                                                  | [CODE](/LinkedList/reverse.cpp)                                            |          |     |        |       |
+| Sorting  | count                                    |                                                                                   |                                             |          |
+| Soting   | heap ||||
+| Sorting  | Quick ||||
+| Sorting  | Merge (imp)  ||||
+
+### Strings
 | Topic    | Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
 | ---------|-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
 | Strings  | Rabin Karp                               |                                                                                   |                                             |          |     |        |       |
 | Strings  | KMP algo / LPS(pi) array                 |                                                                                   |                                             |          |     |        |       |
 | Strings  | min instertion to make string palindrome |                                                                                   |                                             |          |     |        |       |
+
+### Linked List
+| Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
+|-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
+| Reverse                                  | 
+
+### Graphs
+| Topic    | Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
+| ---------|-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
 | Graph    | BFS                                      | [GFG](https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1)            | [CODE](/Graphs/BFS.cpp)                     | DONE     | 1   | NO     |       |
 | Graph    | DFS                                      | [GFG](https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1) | [CODE](/Graphs/DFS.cpp)                     | DONE     | 2   | YES    |       |
 | Graph    | Cycle detection - BFS                    |                                                                                   |                                             |          |     |        |       |
@@ -16,6 +38,7 @@ This is the file which contains all the questions done in DSA
 | Graph    | Bipartite - BFS & DFS                    |                                                                                   |                                             |          |     |        |       |
 | Graph    | Dijkstra Algorithm                       |                                                                                   |                                             |          |     |        |       |
 | Graph    | Bellman-Ford Algo                        |                                                                                   |                                             |          |     |        |       |
+| Graph    | Display shortest path                    | |||
 | Graph    | Floyd Warshall Algorithm                 |                                                                                   |                                             |          |     |        |       |
 | Graph    | Prim's Algo                              |                                                                                   |                                             |          |     |        |       |
 | Graph    | Kruskals Algo                            |                                                                                   |                                             |          |     |        |       |
