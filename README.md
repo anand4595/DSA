@@ -21,6 +21,14 @@ This is the file which contains all the questions done in DSA
 | Strings  | KMP algo / LPS(pi) array                 |                                                                                   |                                             |          |     |        |       |
 | Strings  | min instertion to make string palindrome |                                                                                   |                                             |          |     |        |       |
 
+### Heap
+
+Keywords - A Binary Heap is a complete Binary Tree which is used to store data efficiently to get the max or min element based on its structure.  
+
+| Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
+|-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
+| Implimentation                           | - | [CODE](/Heap/Implimentation.cpp)
+
 ### Linked List
 | Algorithm                                | Question Link                                                                     | Code                                        | Status   |LOD  | Revisit|Remark |
 |-------------------                       | :--------------------------------------------------------------------------------:| -----------------------------------------   |:--------:| --- | :---:  | ---   |
