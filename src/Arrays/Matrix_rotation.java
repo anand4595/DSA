@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/rotate-image/description/
 
+package Arrays;
+
 class Solution {
   private void swap(int[][] matrix, int i, int j) {
     int temp = matrix[i][j];
