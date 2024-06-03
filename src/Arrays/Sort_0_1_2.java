@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/sort-colors/description/
 
+package Arrays;
+
 class Solution {
 
   int ZERO = 0;
